@@ -1,0 +1,88 @@
+body {
+	color: #757575;
+	font-family: Arial;
+	font-size: 1.2vw;
+}
+
+
+a {
+	color: #757575;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #424242;
+}
+
+header {
+	margin-top: 2%;
+	margin-right: 2%;
+	min-width: 20%;
+	margin-left: 2%;
+}
+
+nav {
+	float: right;
+}
+
+#main {
+	padding-top: 8%;
+	padding-left: 12%;
+	padding-right: 20%;
+	padding-bottom: 5%;
+}
+
+h1 {
+	font-weight: lighter;
+	color: #424242;
+	margin-top: 5px;
+	font-size: 2.7vw;
+	padding-left: 0px;
+	margin-bottom: -5px;
+}
+
+img {
+	width: 10vw;
+	border-radius: 8px;
+	-webkit-box-shadow: 0px 0px 10px;
+	box-shadow: 0px 0px 10px;
+}
+
+#name {
+	float: left;
+	margin-left: 2%;
+}
+
+input#show, input#hide {
+    display:none;
+}
+
+span#content {
+    display: block;
+    -webkit-transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out;
+    opacity: 0; 
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+
+input#show:checked ~ .show:before {
+    content: ""
+}
+input#show:checked ~ .hide:before {
+    content: ""
+}
+
+input#hide:checked ~ .hide:before {
+    content: ""
+}
+input#hide:checked ~ .show:before {
+    content: "More"
+}
+input#show:checked ~ span#content {
+	opacity: 1;
+	font-size: 1.2vw;
+	height: auto;
+	margin-top: -2%;
+}
